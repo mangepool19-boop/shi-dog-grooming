@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: shi-dog-grooming
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
