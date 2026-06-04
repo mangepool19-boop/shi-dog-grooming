@@ -7,25 +7,21 @@ export default function Services() {
     <section id="services" className="px-4 py-16 md:px-6 md:py-20">
       <div className="mx-auto max-w-6xl">
         <SectionHeader
-          eyebrow="השירותים שלנו"
-          title="טיפוח מלא, רגוע ומדויק"
-          text="כל טיפול נבנה סביב הכלב: סוג הפרווה, רמת הרגישות והקצב שמתאים לו."
+          eyebrow="השירותים"
+          title="כל מה שהכלב צריך כדי לצאת מסודר ונעים"
+          text="שירותי טיפוח בסיסיים וברורים, עם דגש על נוחות הכלב ועל תוצאה שנראית טבעית ונקייה."
         />
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => {
             const Icon = service.icon
             return (
-              <Reveal
-                key={service.title}
-                delay={index * 90}
-                className="rounded-lg border border-sky-100 bg-white p-5 shadow-sm shadow-sky-900/5"
-              >
-                <div className="mb-5 grid size-12 place-items-center rounded-lg bg-sky-50 text-sky-600">
+              <Reveal key={service.title} delay={index * 80} className="warm-card rounded-[1.5rem] p-5">
+                <div className="mb-5 grid size-12 place-items-center rounded-2xl bg-[#f4eadb] text-[#7c8b43]">
                   <Icon size={24} aria-hidden="true" />
                 </div>
-                <h3 className="text-xl font-bold text-[#0f2f38]">{service.title}</h3>
-                <p className="mt-3 leading-7 text-slate-600">{service.description}</p>
+                <h3 className="text-xl font-extrabold text-[#2e261f]">{service.title}</h3>
+                <p className="mt-3 leading-7 text-[#6f6255]">{service.description}</p>
               </Reveal>
             )
           })}
